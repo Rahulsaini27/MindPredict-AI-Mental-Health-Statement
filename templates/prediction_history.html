@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Prediction History{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="page-title text-center ">Your Prediction History</h2>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Statement</th>
+                    <th>Predicted Status</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prediction in predictions %}
+                <tr>
+                    <td>{{ prediction.statement }}</td>
+                    <td>{{ prediction.predicted_status }}</td>
+                    <td>{{ prediction.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

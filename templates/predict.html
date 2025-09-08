@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Predict{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="text-center">Make a Prediction</h2>
+    <form method="post" id="predictionForm">
+        {% csrf_token %}
+        <input type="text" name="Statement" placeholder="Please enter your statement" required>
+        <button type="submit">Predict</button>
+    </form>
+    <h2 id="predictionResult"></h2>
+</div>
+
+<script>
+    document.getElementById('predictionForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent the default form submission
+
+    const formData = new FormData(this);
+
+    fetch('{% url "predict_view" %}', {  // Use the name defined in urls.py
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': '{{ csrf_token }}',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.predicted_status) {
+            document.getElementById('predictionResult').innerText = "The prediction is: " + data.predicted_status;  
+        } else {
+            document.getElementById('predictionResult').innerText = "Error: " + data.error;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+</script>
+
+{% endblock %}
+
+<style>
+    .container {
+        max-width: 200px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
