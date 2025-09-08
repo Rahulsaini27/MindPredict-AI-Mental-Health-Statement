@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# Database
+*.sqlite3
+
+# Machine learning models
+*.pkl
+*.joblib
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
