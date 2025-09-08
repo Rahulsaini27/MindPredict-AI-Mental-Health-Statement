@@ -7,16 +7,12 @@ __pycache__/
 # Virtual environment
 venv/
 
-# Database
+# Large files
 *.sqlite3
-
-# Machine learning models
 *.pkl
 *.joblib
 
-# VSCode settings
-.vscode/
-
 # OS files
+.vscode/
 .DS_Store
 Thumbs.db
