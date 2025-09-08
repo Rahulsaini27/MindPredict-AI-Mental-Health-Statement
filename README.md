@@ -47,19 +47,19 @@ The project features a secure user authentication system, allowing users to trac
 ## 📸 Application Screenshots
 
 ### Homepage
-![Homepage Screenshot](screenshots/home.png)
+![Homepage Screenshot](./ScreenShots//Home.png)
 *Engaging homepage with image carousel and navigation*
 
 ### Authentication Pages
 | Login Page | Signup Page |
 |------------|-------------|
-| ![Login Screenshot](screenshots/login.png) | ![Signup Screenshot](screenshots/signup.png) |
+| ![Login Screenshot](./ScreenShots//login.png) | ![Signup Screenshot](./ScreenShots//signup.png) |
 | *Simple and secure login form* | *User-friendly registration interface* |
 
 ### Core Functionality
 | Prediction Page | Prediction History |
 |-----------------|-------------------|
-| ![Prediction Screenshot](screenshots/prediction.png) | ![History Screenshot](screenshots/history.png) |
+| ![Prediction Screenshot](./ScreenShots/emotionpredicition.png) | ![History Screenshot](./ScreenShots//histroy.png) |
 | *Clean interface for statement input and AI analysis* | *Comprehensive history of past predictions and analysis* |
 
 > **Note**: Add your screenshot files to a `screenshots/` folder in your repository root, with filenames: `home.png`, `login.png`, `signup.png`, `prediction.png`, and `history.png`.
@@ -248,3 +248,4 @@ This application is for educational and informational purposes only. It should n
 ---
 
 **Made with ❤️ for mental health awareness**
+
